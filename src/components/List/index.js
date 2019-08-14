@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container } from './styles';
 
+import BoardContext from '../Board/context';
 import Card from '../Card';
 import { MdAdd } from 'react-icons/md';
+import { useDrop } from 'react-dnd';
 
 export default function List({ data, index: listIndex }) {
+	const { move } = useContext(BoardContext);
+
+	const [{ isActive }, drop] = useDrop({
+		accept: 'CARD',
+		drop(item, monitor) {
+			const draggedListIndex = item.listIndex;
+			const targetListIndex = listIndex;
+
+			const draggedIndex = item.index;
+			const targetIndex = 0;
+
+			if (draggedListIndex === targetListIndex) {
+				return;
+			}
+
+			move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
+		},
+		collect: monitor => ({
+			isActive: monitor.canDrop() && monitor.isOver(),
+		}),
+	})
+
 	return (
-		<Container done={data.done}>
+		<Container ref={drop} done={data.done}>
 			<header>
 				<h2>{data.title}</h2>
 				{data.creatable && (

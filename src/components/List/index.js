@@ -16,7 +16,7 @@ export default function List({ data, index: listIndex }) {
 			const targetListIndex = listIndex;
 
 			const draggedIndex = item.index;
-			const targetIndex = 0;
+			const targetIndex = data.cards.length;
 
 			if (draggedListIndex === targetListIndex) {
 				return;

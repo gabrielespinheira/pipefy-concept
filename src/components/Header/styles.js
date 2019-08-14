@@ -7,4 +7,8 @@ export const Container = styles.div`
 	color: #fff;
 	display: flex;
 	align-items: center;
+
+	h1 {
+		font-weight: 500;
+	}
 `;

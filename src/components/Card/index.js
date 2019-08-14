@@ -55,7 +55,7 @@ export default function Card({ data, index, listIndex }) {
 	return (
 		<Container ref={ref} isDragging={isDragging}>
 			<header>
-				{ data.labels.map(label => <Label color={label} />) }
+				{ data.labels.map(label => <Label key={label} color={label} />) }
 			</header>
 			<p>{data.content}</p>
 			{ data.user && <img src={data.user} alt="" /> }

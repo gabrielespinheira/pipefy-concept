@@ -1,51 +1,39 @@
 export function loadLists() {
   return [
     {
-      title: 'Tarefas',
+      title: 'Aguardando',
       creatable: true,
       cards: [
         {
           id: 1,
-          content: 'Estudar módulo 01 de NodeJS',
+          content: 'Desenvolver Aplicação ReactJs',
           labels: ['#7159c1'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          user: 'https://api.adorable.io/avatars/100/abott@adorable.png'
         },
         {
           id: 2,
-          content: 'Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy',
+          content: 'Criar Endpoint API Rest',
           labels: ['#7159c1'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          user: 'https://api.adorable.io/avatars/100/1.png'
         },
         {
           id: 3,
-          content: 'Estudar módulo 03 de React Native',
+          content: 'Refactor',
           labels: ['#7159c1'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          user: 'https://api.adorable.io/avatars/100/2.png'
         },
         {
           id: 4,
-          content: 'Gravar Aula "NextJS: Utilizando server-side rendering com ReactJS"',
+          content: 'Configurar banco de dados Redis',
           labels: ['#54e1f7'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          user: 'https://api.adorable.io/avatars/100/3.png'
         },
         {
           id: 5,
-          content: 'Gravar testes e deploy ReactJS',
+          content: 'Salvar informações na Cache',
           labels: ['#54e1f7'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          user: 'https://api.adorable.io/avatars/100/4.png'
         },
-      ]
-    },
-    {
-      title: 'Fazendo',
-      creatable: false,
-      cards: [
-        {
-          id: 6,
-          content: 'Recriando clone do Pipefy',
-          labels: [],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
-        }
       ]
     },
     {
@@ -53,20 +41,32 @@ export function loadLists() {
       creatable: false,
       cards: [
         {
+          id: 6,
+          content: 'Atualizar projetos no GitHub',
+          labels: [],
+          user: 'https://api.adorable.io/avatars/100/5.png'
+        }
+      ]
+    },
+    {
+      title: 'Fazendo',
+      creatable: false,
+      cards: [
+        {
           id: 7,
-          content: 'Gravar sobre Geolocalização e mapas com React Native',
+          content: 'Testes Unitários',
           labels: ['#7159c1'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          user: 'https://api.adorable.io/avatars/100/6.png'
         },
         {
           id: 8,
-          content: 'Gravar testes e deploy ReactJS',
+          content: 'Validação de Issues',
           labels: ['#54e1f7'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          user: 'https://api.adorable.io/avatars/100/7.png'
         },
         {
           id: 9,
-          content: 'Ajustes na biblioteca unform',
+          content: 'Ajustes na biblioteca',
           labels: [],
         }
       ]
@@ -78,17 +78,17 @@ export function loadLists() {
       cards: [
         {
           id: 10,
-          content: 'Gravar aula sobre deploy e CI com React Native',
+          content: 'Front end em ReactJs',
           labels: [],
         },
         {
           id: 12,
-          content: 'Gravar testes e deploy ReactJS',
+          content: 'Estruturar ambiente utilizando Docker',
           labels: ['#54e1f7'],
         },
         {
           id: 13,
-          content: 'Gravar Aula "Internacionalização de aplicações Node.js, ReactJS e React Native"',
+          content: 'Criar repositório privado no GitHub',
           labels: ['#7159c1'],
         }
       ]

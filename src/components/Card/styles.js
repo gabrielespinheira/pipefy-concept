@@ -4,11 +4,19 @@ export const Container = styles.div`
 	position: relative;
 	background: #fff;
 	border-radius: 5px;
-	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-bottom: 15px;
 	padding: 15px;
-	box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 0.8);
+	/* box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 0.8); */
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.07);
 	border-top: 20px solid rgba(230, 236, 245, 0.4);
 	cursor: grab;
+
+	.dark & {
+		background: #444;
+		border-color: #555;
+		box-shadow: 0 1px 7px 0 rgba(0,0,0,0.20);
+	}
 
 	header {
 		position: absolute;
@@ -35,9 +43,15 @@ export const Container = styles.div`
 		background: transparent;
 		box-shadow: none;
 		cursor: grabbing;
+		border-radius: 5px;
 
 		p, img, header {
 			opacity: 0;
+		}
+
+		.dark & {
+			background: #666;
+			border-color: #fff;
 		}
 	`}
 `;
@@ -47,5 +61,6 @@ export const Label = styles.span`
 	height: 10px;
 	border-radius: 2px;
 	display: inline-block;
+	margin-right: 7px;
 	background: ${props => props.color}
 `;

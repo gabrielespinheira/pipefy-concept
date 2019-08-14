@@ -7,7 +7,7 @@ export function loadLists() {
         {
           id: 1,
           content: 'Desenvolver Aplicação ReactJs',
-          labels: ['#7159c1'],
+          labels: ['#7159c1', '#54e1f7'],
           user: 'https://api.adorable.io/avatars/100/abott@adorable.png'
         },
         {

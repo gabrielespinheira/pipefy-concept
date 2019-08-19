@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 
 import { Container } from './styles';
+import MainContext from '../Main/context';
 
 export default function Header() {
+	const { mode, handleToggleMode } = useContext(MainContext);
+
 	return (
 		<Container>
 			<div id="board" className="dropdown left">
@@ -20,7 +23,7 @@ export default function Header() {
 
 				<nav>
 					<a href="/">Perfil</a>
-					<a href="/">Dark mode</a>
+					<a href="/" onClick={handleToggleMode}>Dark {mode}</a>
 					<a href="/">Sair</a>
 				</nav>
 			</div>

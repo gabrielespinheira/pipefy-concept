@@ -20,6 +20,10 @@ export default createGlobalStyle`
 		color: #333;
 		-webkit-font-smoothing: antialiased !important;
 		overflow: hidden;
+	}
+
+	main {
+		height: 100%;
 
 		&.dark {
 			background: #333;

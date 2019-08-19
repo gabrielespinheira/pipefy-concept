@@ -1,13 +1,12 @@
 import styles, { css } from 'styled-components';
 
-export const Container = styles.div`
+export const Container = styles.li`
 	position: relative;
 	background: #fff;
 	border-radius: 5px;
 	margin-right: 10px;
 	margin-bottom: 15px;
 	padding: 15px;
-	/* box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 0.8); */
 	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.07);
 	border-top: 20px solid rgba(230, 236, 245, 0.4);
 	cursor: grab;

@@ -9,8 +9,8 @@ export default function Header() {
 				<h1>Board</h1>
 
 				<nav>
-					<a href="">Srpint</a>
-					<a href="">Kanban</a>
+					<a href="/">Sprint</a>
+					<a href="/">Kanban</a>
 				</nav>
 			</div>
 
@@ -19,8 +19,9 @@ export default function Header() {
 				<img src="https://api.adorable.io/avatars/100/7.png" alt="Avatar" />
 
 				<nav>
-					<a href="">Perfil</a>
-					<a href="">Sair</a>
+					<a href="/">Perfil</a>
+					<a href="/">Dark mode</a>
+					<a href="/">Sair</a>
 				</nav>
 			</div>
 		</Container>

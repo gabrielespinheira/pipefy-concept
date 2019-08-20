@@ -23,7 +23,9 @@ export default function Header() {
 
 				<nav>
 					<a href="/">Perfil</a>
-					<a href="/" onClick={handleToggleMode}>Dark {mode}</a>
+					<a href="/" onClick={handleToggleMode}>
+						{mode.charAt(0).toUpperCase() + mode.slice(1)} mode
+					</a>
 					<a href="/">Sair</a>
 				</nav>
 			</div>

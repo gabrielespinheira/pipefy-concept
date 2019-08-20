@@ -7,7 +7,7 @@ import Header from '../Header';
 import Board from '../Board';
 
 export default function Main() {
-	const [mode, setMode] = useState('light');
+	const [mode, setMode] = useState('dark');
 
 	function handleToggleMode(e) {
 		e.preventDefault();

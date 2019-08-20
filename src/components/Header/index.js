@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 
 import { Container } from './styles';
 import MainContext from '../Main/context';
@@ -24,9 +24,9 @@ export default function Header() {
 				<nav>
 					<a href="/">Perfil</a>
 					<a href="/" onClick={handleToggleMode}>
-						{mode.charAt(0).toUpperCase() + mode.slice(1)} mode
+						{(mode === 'light') ? 'Dark' : 'Light'} mode
 					</a>
-					<a href="/">Sair</a>
+					<a href="/logout">Sair</a>
 				</nav>
 			</div>
 		</Container>

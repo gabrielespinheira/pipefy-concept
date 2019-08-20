@@ -25,7 +25,7 @@ export default function List({ data, index: listIndex }) {
 			move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
 		},
 		collect: monitor => ({
-			isActive: monitor.canDrop() && monitor.isOver() && (data.cards.length == 0),
+			isActive: monitor.canDrop() && monitor.isOver() && (data.cards.length === 0),
 		}),
 	})
 

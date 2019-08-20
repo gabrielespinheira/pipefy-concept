@@ -1,4 +1,4 @@
-import styles from 'styled-components';
+import styles, { css } from 'styled-components';
 
 export const Container = styles.div`
 	padding: 0 5px 0 15px;
@@ -60,4 +60,26 @@ export const Container = styles.div`
 		.dark &::-webkit-scrollbar-thumb { background: #555; border-radius: 30px; }
 		.dark &::-webkit-scrollbar-thumb:hover { background: #888; border-radius: 30px; }
 	}
+
+	${props => props.isActive && css`
+		.list ul {
+			border: 2px dashed rgba(0, 0, 0, 0.2);
+			padding-top: 31px;
+			border-radius: 0;
+			background: transparent;
+			box-shadow: none;
+			cursor: grabbing;
+			border-radius: 5px;
+			min-height: 70px;
+
+			p, img, header {
+				opacity: 0;
+			}
+
+			.dark & {
+				background: #666;
+				border-color: #fff;
+			}
+		}
+	`}
 `;

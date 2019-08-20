@@ -53,6 +53,25 @@ export const Container = styles.li`
 			border-color: #fff;
 		}
 	`}
+
+	${props => props.isActive && css`
+		border: 2px dashed rgba(0, 0, 0, 0.2);
+		padding-top: 31px;
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
+		cursor: grabbing;
+		border-radius: 5px;
+
+		p, img, header {
+			opacity: 0;
+		}
+
+		.dark & {
+			background: #666;
+			border-color: #fff;
+		}
+	`}
 `;
 
 export const Label = styles.span`

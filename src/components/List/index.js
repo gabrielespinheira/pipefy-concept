@@ -25,12 +25,12 @@ export default function List({ data, index: listIndex }) {
 			move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
 		},
 		collect: monitor => ({
-			isActive: monitor.canDrop() && monitor.isOver(),
+			isActive: monitor.canDrop() && monitor.isOver() && (data.cards.length == 0),
 		}),
 	})
 
 	return (
-		<Container ref={drop} done={data.done}>
+		<Container ref={drop} isActive={isActive} done={data.done}>
 			<header>
 				<h2>{data.title}</h2>
 				{data.creatable && (

@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
 import GlobalStyle from '../styles/global';
 import styles from 'styled-components';
@@ -14,7 +13,9 @@ export default function Login({ history }) {
 	return(
 		<Container>
 			<form>
-				<img src="/favicon.png" alt="" />
+				<div>
+					<img src="/favicon.png" alt="" />
+				</div>
 				<input type="email" name="user" id="user" />
 				<input type="password" name="pass" id="pass" />
 				<button type="button" name="send" onClick={handleSubmit}>Login</button>
@@ -37,18 +38,24 @@ export const Container = styles.main`
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		max-width: 300px;
+		max-width: 320px;
 		padding: 15px;
 
-		img {
-			width: 32px;
-			height: 32px;
+		div {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
 			margin-bottom: 30px;
+
+			img {
+				width: 32px;
+				height: 32px;
+			}
 		}
 
 		input {
 			width: 100%;
-			max-width: 500px;
 			background: #fff;
 			border-radius: 5px;
 			box-shadow: 0 1px 4px 0 rgba(0,0,0,0.07);

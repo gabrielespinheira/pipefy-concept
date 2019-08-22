@@ -20,7 +20,7 @@ export const Container = styles.div`
 		background: #fff;
 		border-radius: 5px;
 		width: 500px;
-		box-shadow: 0 3px 25px rgba(0, 0, 0, 0.7);
+		box-shadow: 0 3px 25px 5px rgba(0, 0, 0, 0.2);
 		height: 500px;
 		margin: auto;
 		color: #444;

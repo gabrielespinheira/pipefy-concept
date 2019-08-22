@@ -4,12 +4,12 @@ import { Container } from './styles';
 import { MdClose } from "react-icons/md";
 
 export default function Popup() {
-	const [status, setStatus] = useState('disabled');
+	const [status, setStatus] = useState('active');
 
 	function handleClose(e) {
 		e.preventDefault();
 
-		setStatus('active');
+		setStatus('disabled');
 	}
 
 	return (

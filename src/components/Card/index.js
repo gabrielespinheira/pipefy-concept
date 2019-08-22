@@ -2,6 +2,8 @@ import React, { useRef, useContext } from 'react';
 import { Container, Label } from './styles';
 
 import BoardContext from '../Board/context';
+import Popup from "reactjs-popup";
+import { MdClose, MdLabelOutline } from "react-icons/md";
 
 import { useDrag, useDrop } from 'react-dnd';
 
@@ -56,12 +58,37 @@ export default function Card({ data, index, listIndex }) {
 	dragRef(dropRef(ref));
 
 	return (
-		<Container ref={ref} isDragging={isDragging} isActive={isActive}>
-			<header>
-				{ data.labels.map(label => <Label key={label} color={label} />) }
-			</header>
-			<p>{data.content}</p>
-			{ data.user && <img src={data.user} alt="" /> }
-		</Container>
+		<Popup trigger={
+			<Container ref={ref} isDragging={isDragging} isActive={isActive}>
+				<header>
+					{ data.labels.map(label => <Label key={label} color={label} />) }
+				</header>
+				<p>{data.content}</p>
+				{ data.user && <img src={data.user} alt="" /> }
+			</Container>
+		} modal>
+			{close => (
+				<div className="modal">
+					<a className="close" onClick={close}><MdClose /></a>
+
+					<h1>{data.content}</h1>
+
+					<div className="info">
+						<div>
+							{ data.user && <img src={data.user} alt="" /> }
+							<span>Gabriel Araujo</span>
+						</div>
+
+						{data.labels.length > 0 &&
+						<div>
+							{ data.labels.map(label => <Label key={label} color={label} />) }
+						</div>
+						}
+					</div>
+
+					<p>Lorem ipsum dolor set amel Lorem ipsum dolor set amel Lorem ipsum dolor set amel Lorem ipsum dolor set amel Lorem ipsum dolor set amel Lorem ipsum dolor set amel</p>
+				</div>
+			)}
+		</Popup>
 	);
 }

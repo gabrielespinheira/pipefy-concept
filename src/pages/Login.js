@@ -1,31 +1,32 @@
-import React from 'react';
+import React from 'react'
 
-import GlobalStyle from '../styles/global';
-import styles from 'styled-components';
+import GlobalStyle from '../styles/global'
+import styles from 'styled-components'
 
 export default function Login({ history }) {
-	function handleSubmit(e) {
-		e.preventDefault();
+  function handleSubmit(e) {
+    e.preventDefault()
 
-		history.push(`/dashboard`);
-	}
+    history.push(`/dashboard`)
+  }
 
-	return(
-		<Container>
-			<form>
-				<div>
-					<img src="/favicon.png" alt="" />
-				</div>
-				<input type="email" name="user" id="user" />
-				<input type="password" name="pass" id="pass" />
-				<button type="button" name="send" onClick={handleSubmit}>Login</button>
-			</form>
+  return (
+    <Container>
+      <form>
+        <div>
+          <img src="/favicon.png" alt="" />
+        </div>
+        <input type="email" name="user" id="user" />
+        <input type="password" name="pass" id="pass" />
+        <button type="button" name="send" onClick={handleSubmit}>
+          Login
+        </button>
+      </form>
 
-			<GlobalStyle />
-		</Container>
-	);
+      <GlobalStyle />
+    </Container>
+  )
 }
-
 
 export const Container = styles.main`
 	height: 100%;
@@ -76,4 +77,4 @@ export const Container = styles.main`
 			width: 100%;
 		}
 	}
-`;
+`

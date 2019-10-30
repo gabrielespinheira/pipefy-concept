@@ -1,7 +1,16 @@
 {
   "name": "app",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Gabriel Araujo",
+    "email": "gabriiel66@gmail.com",
+    "url": "http://ogabrielaraujo.com.br"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ogabrielaraujo/pipefy.git"
+  },
   "dependencies": {
     "immer": "^3.2.0",
     "react": "^16.9.0",
@@ -15,10 +24,14 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build -p 3002",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "up": "pm2 start npm --name pipefy_react -- start",
+    "up:dev": "pm2 start node_modules/react-scripts/scripts/start.js --name pipefy_react",
+    "down": "pm2 del pipefy_react"
   },
   "eslintConfig": {
     "extends": "react-app"

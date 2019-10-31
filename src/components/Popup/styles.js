@@ -1,4 +1,4 @@
-import styles, { css } from 'styled-components';
+import styles, { css } from 'styled-components'
 
 export const Container = styles.div`
 	position: fixed;
@@ -11,9 +11,11 @@ export const Container = styles.div`
 	align-items: center;
 	justify-content: center;
 
-	${props => (props.status === 'active') && css`
-		display: flex;
-	`}
+	${props =>
+    props.status === 'active' &&
+    css`
+      display: flex;
+    `}
 
 	.content {
 		position: relative;
@@ -43,4 +45,4 @@ export const Container = styles.div`
 		font: 18px 'Roboto',sans-serif;
 		cursor: pointer;
 	}
-`;
+`

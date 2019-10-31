@@ -1,4 +1,4 @@
-import styles, { css } from 'styled-components';
+import styles, { css } from 'styled-components'
 
 export const Container = styles.li`
 	position: relative;
@@ -35,44 +35,52 @@ export const Container = styles.li`
 		margin-top: 5px;
 	}
 
-	${props => props.isDragging && css`
-		border: 2px dashed rgba(0, 0, 0, 0.2);
-		padding-top: 31px;
-		border-radius: 0;
-		background: transparent;
-		box-shadow: none;
-		cursor: grabbing;
-		border-radius: 5px;
+	${props =>
+    props.isDragging &&
+    css`
+      border: 2px dashed rgba(0, 0, 0, 0.2);
+      padding-top: 31px;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      cursor: grabbing;
+      border-radius: 5px;
 
-		p, img, header {
-			opacity: 0;
-		}
+      p,
+      img,
+      header {
+        opacity: 0;
+      }
 
-		.dark & {
-			background: #666;
-			border-color: #fff;
-		}
-	`}
+      .dark & {
+        background: #666;
+        border-color: #fff;
+      }
+    `}
 
-	${props => props.isActive && css`
-		border: 2px dashed rgba(0, 0, 0, 0.2);
-		padding-top: 31px;
-		border-radius: 0;
-		background: transparent;
-		box-shadow: none;
-		cursor: grabbing;
-		border-radius: 5px;
+	${props =>
+    props.isActive &&
+    css`
+      border: 2px dashed rgba(0, 0, 0, 0.2);
+      padding-top: 31px;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      cursor: grabbing;
+      border-radius: 5px;
 
-		p, img, header {
-			opacity: 0;
-		}
+      p,
+      img,
+      header {
+        opacity: 0;
+      }
 
-		.dark & {
-			background: #666;
-			border-color: #fff;
-		}
-	`}
-`;
+      .dark & {
+        background: #666;
+        border-color: #fff;
+      }
+    `}
+`
 
 export const Label = styles.span`
 	width: 10px;
@@ -81,4 +89,4 @@ export const Label = styles.span`
 	display: inline-block;
 	margin-right: 7px;
 	background: ${props => props.color}
-`;
+`
